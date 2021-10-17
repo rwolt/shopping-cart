@@ -1,24 +1,54 @@
-import logo from './logo.svg';
+import {
+  chronoBlack,
+  chronoSilver,
+  classicGold,
+  blacktopBlack,
+  blacktopGold,
+  blacktopSilver,
+  legacyGold,
+  legacySilver
+} from './images';
+import { useState } from 'react';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Nav from './components/Nav';
+import MainLayout from './components/MainLayout';
 
-function App() {
+const App = () => {
+
+  const [items, setItems] = useState(
+    [
+      {
+       name: 'Chrono',
+       size: '43mm',
+       color: 'Black',
+       price: 118,
+       image: chronoBlack
+      },
+      {
+        name: 'Classic',
+        size: '40mm',
+        color: 'Gold',
+        price: 158,
+        image: classicGold
+       },
+       {
+        name: 'Blacktop',
+        size: '42mm',
+        color: 'Silver',
+        price: 198,
+        image: blacktopSilver
+       }
+    ]
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <MainLayout items={items} />
+      </div>
+    </Router>
   );
 }
 

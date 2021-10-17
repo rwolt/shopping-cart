@@ -1,0 +1,24 @@
+.home-container {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag-line {
+    font-size: 28px;
+}
+
+.shop-now-button {
+    font-size: 26px;
+}
+
+.hero-image {
+    width: 50%;
+}
