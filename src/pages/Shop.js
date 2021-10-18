@@ -1,4 +1,5 @@
 import ProductCard from '../components/ProductCard';
+import '../styles/Shop.css';
 
 const Shop = (props) => {
     console.log(props)
@@ -7,6 +8,8 @@ const Shop = (props) => {
             {props.items.map(item => {
                 return (
                     <ProductCard
+                        key={item.id}
+                        id={item.id}
                         name={item.name}
                         size={item.size}
                         color={item.color}
