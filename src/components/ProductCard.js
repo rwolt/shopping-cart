@@ -3,7 +3,6 @@ import '../styles/ProductCard.css';
 
 const ProductCard = (props) => {
     const match = useRouteMatch();
-
     return(
         <div className="product-card-container">
             <Link to={`${match.url}/${props.id}`}>
@@ -12,7 +11,7 @@ const ProductCard = (props) => {
             <p className="product-card-name">{props.name} {props.size}</p>
             <p className="product-card-color">{props.color}</p>
             <p className="product-card-price">{props.price}</p>
-            <button className="add-to-cart-card hidden">Add To Cart</button>
+            <button id={props.id} onClick={props.handleAdd} className="add-to-cart-card hidden">Add To Cart</button>
         </div>
     )
 }

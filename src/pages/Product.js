@@ -6,7 +6,6 @@ const Product = (props) => {
     const params = useParams();
     const {id} = params;
     const item = props.items.filter(item => item.id === id)[0];
-    console.log(item);
 
     return(
         <div className="product-container">

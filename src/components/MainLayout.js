@@ -9,10 +9,16 @@ const MainLayout = (props) => {
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/shop" exact>
-                    <Shop items={props.items} />
+                    <Shop
+                        items={props.items}
+                        handleAdd={props.handleAdd}
+                    />
                 </Route>
                 <Route path="/shop/:id">
-                    <Product items={props.items} />
+                    <Product
+                        items={props.items}
+                        handleAdd={props.handleAdd}
+                    />
                 </Route>
             </Switch>
 

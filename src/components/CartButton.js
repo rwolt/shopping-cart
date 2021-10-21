@@ -1,8 +1,9 @@
-const CartButton = () => {
+const CartButton = (props) => {
+
     return(
         <div className="cart-counter">
             <button className="cart-button">Cart</button>
-            <p>0</p>
+            <p>{props.totalItems}</p>
         </div>
     )
 }

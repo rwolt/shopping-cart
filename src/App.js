@@ -8,7 +8,7 @@ import {
   legacyGold,
   legacySilver
 } from './images';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Nav from './components/Nav';
@@ -17,7 +17,21 @@ import uniqid from 'uniqid';
 
 const App = () => {
 
-  const cart, setCart = useState([]);
+  const [cart, setCart] = useState([]);
+  const [totalItems, setTotalItems] = useState(0);
+  // const [totalPrice, setTotalPrice] = useState([]);
+
+
+   useEffect(() => {
+    if(cart.length === 1) {
+      setTotalItems(cart[0].quantity)
+    } else if (cart.length > 1) {
+      const total = cart.reduce((prev, next) => {
+        return prev + next.quantity
+      }, 0);
+      setTotalItems(total);
+    }
+  }, [cart]);
 
   const [items, setItems] = useState(
     [
@@ -89,14 +103,27 @@ const App = () => {
   );
 
   const handleAdd = (e) => {
-    const item = 
-  }
+    const {id} = e.target;
+    const added = items.filter(item => item.id === id)[0];
+    //If the cart is empty, add the item with a quantity of 1
+    if (cart.length === 0) {
+      setCart([{id: added.id, quantity: 1}])
+    }
+    //If the item is already in the cart, increase its quantity by ones
+    else if(cart.some(cartItem => cartItem.id === added.id)){
+      setCart(cart.map(cartItem =>
+        cartItem.id === added.id ? {...cartItem, quantity: (cartItem.quantity + 1)} : {...cartItem}));
+    //Else add a new item to the cart
+    } else {
+      setCart(cart.concat([{id: added.id, quantity: 1}]));
+    }
+  };
 
   return (
     <Router>
       <div className="App">
-        <Nav cart={cart} />
-        <MainLayout items={items} cart={cart} handleAdd={this.handleAdd} />
+        <Nav totalItems={totalItems} />
+        <MainLayout items={items} cart={cart} handleAdd={handleAdd} />
       </div>
     </Router>
   );

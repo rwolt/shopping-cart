@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import '../styles/Nav.css';
 import CartButton from './CartButton';
 
-const Nav = () => {
+const Nav = (props) => {
     return(
         <div className="nav-bar">
             <h1 className="title">Krono Store</h1>
@@ -17,7 +17,7 @@ const Nav = () => {
                     <Link to="/contact">Contact</Link>
                 </li>
             </nav>
-            <CartButton />
+            <CartButton totalItems={props.totalItems} />
         </div>
     )
 }
