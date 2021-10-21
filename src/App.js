@@ -102,6 +102,17 @@ const App = () => {
     ]
   );
 
+  const [showCart, setShowCart] = useState(false);
+
+  const hideCart = () => {
+      setShowCart(false);
+  }
+
+  const unHideCart = () => {
+      setShowCart(true);
+  }
+
+
   const handleAdd = (e) => {
     const {id} = e.target;
     const added = items.filter(item => item.id === id)[0];
@@ -122,8 +133,13 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <Nav totalItems={totalItems} />
-        <MainLayout items={items} cart={cart} handleAdd={handleAdd} />
+        <Nav totalItems={totalItems} unHideCart={unHideCart} />
+        <MainLayout
+          items={items}
+          cart={cart}
+          showCart={showCart}
+          hideCart={hideCart}
+          handleAdd={handleAdd} />
       </div>
     </Router>
   );

@@ -3,10 +3,6 @@ import '../styles/Shop.css';
 
 const Shop = (props) => {
 
-    const hideCart = () => {
-        document.querySelector('.shopping-cart-container').style.display = "none";
-    }
-
     return(
         <div className="shop-container">
             <div className="card-layout-container">
@@ -24,16 +20,6 @@ const Shop = (props) => {
                             />
                         )
                     })}
-            </div>
-            <div className="shopping-cart-container">
-                <button
-                    className="close-cart-button"
-                    onClick={hideCart}>
-                    X
-                </button>
-                <div className="shopping-cart">
-
-                </div>
             </div>
         </div>
     )

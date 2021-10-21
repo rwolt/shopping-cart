@@ -17,7 +17,9 @@ const Nav = (props) => {
                     <Link to="/contact">Contact</Link>
                 </li>
             </nav>
-            <CartButton totalItems={props.totalItems} />
+            <CartButton
+                unHideCart={props.unHideCart}
+                totalItems={props.totalItems} />
         </div>
     )
 }

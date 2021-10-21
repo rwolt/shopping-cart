@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { Switch, Route } from 'react-router';
 import Home from '../pages/Home';
 import Shop from '../pages/Shop';
 import Product from '../pages/Product';
+import ShoppingCart from './ShoppingCart';
 
 const MainLayout = (props) => {
+
     return(
         <div className="main-layout">
             <Switch>
@@ -11,6 +14,7 @@ const MainLayout = (props) => {
                 <Route path="/shop" exact>
                     <Shop
                         items={props.items}
+                        cart={props.cart}
                         handleAdd={props.handleAdd}
                     />
                 </Route>
@@ -21,7 +25,7 @@ const MainLayout = (props) => {
                     />
                 </Route>
             </Switch>
-
+            {props.showCart ? <ShoppingCart cart={props.cart} hideCart={props.hideCart} /> : ''}
         </div>
     )
 }
