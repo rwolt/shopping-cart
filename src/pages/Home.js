@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import hero from '../images/urban-casual.jpg';
+import hero from '../images/smart-casual.jpg';
 import '../styles/Home.css';
 
 const Home = () => {

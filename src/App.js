@@ -39,7 +39,7 @@ const App = () => {
        name: 'Chrono',
        size: '43mm',
        color: 'Black',
-       price: 118,
+       price: 138,
        image: chronoBlack,
        id: uniqid()
       },
@@ -47,7 +47,7 @@ const App = () => {
         name: 'Chrono',
         size: '43mm',
         color: 'Silver',
-        price: 118,
+        price: 138,
         image: chronoSilver,
         id: uniqid()
        },

@@ -1,4 +1,28 @@
 .shop-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-layout-container {
+    width:80vw;
+    height: 100%;
+    display: flex;
     flex-wrap: wrap;
 }
+/*
+.hidden {
+    display: none;
+} */
+
+.shopping-cart-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 25vw;
+    height: 100vh;
+    background-color: white;
+    border-left: 1px solid black;
+}
+
