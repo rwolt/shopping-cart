@@ -6,7 +6,7 @@ const Home = () => {
     return(
         <div className="home-container">
             <div className="button-container">
-                <p className="tag-line">Men's Watch Sale</p>
+                <p className="tag-line">MEN'S WATCH SALE</p>
                 <button className="shop-now-button"><Link to="/shop">Shop Now</Link> </button>
             </div>
             <img className="hero-image" src={hero} alt="urban model wearing a wristwatch" />

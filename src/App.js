@@ -19,7 +19,7 @@ const App = () => {
 
   const [cart, setCart] = useState([]);
   const [totalItems, setTotalItems] = useState(0);
-  // const [totalPrice, setTotalPrice] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
 
    useEffect(() => {
@@ -31,6 +31,13 @@ const App = () => {
       }, 0);
       setTotalItems(total);
     }
+  }, [cart]);
+
+  useEffect(() => {
+    if (cart.length > 0)
+    setTotalPrice(cart.reduce((prev, next) => {
+      return prev + (next.price * next.quantity);
+    }, 0));
   }, [cart]);
 
   const [items, setItems] = useState(
@@ -62,7 +69,7 @@ const App = () => {
        {
         name: 'Legacy',
         size: '42mm',
-        color: 'Gold',
+        color: 'Silver',
         price: 118,
         image: legacySilver,
         id: uniqid()
@@ -118,7 +125,13 @@ const App = () => {
     const added = items.filter(item => item.id === id)[0];
     //If the cart is empty, add the item with a quantity of 1
     if (cart.length === 0) {
-      setCart([{id: added.id, quantity: 1}])
+      setCart([{
+          id: added.id,
+          image: added.image,
+          name: added.name,
+          color: added.color,
+          price: added.price,
+          quantity: 1}])
     }
     //If the item is already in the cart, increase its quantity by ones
     else if(cart.some(cartItem => cartItem.id === added.id)){
@@ -126,9 +139,20 @@ const App = () => {
         cartItem.id === added.id ? {...cartItem, quantity: (cartItem.quantity + 1)} : {...cartItem}));
     //Else add a new item to the cart
     } else {
-      setCart(cart.concat([{id: added.id, quantity: 1}]));
+      setCart(cart.concat([{
+        id: added.id,
+        image: added.image,
+        name: added.name,
+        color: added.color,
+        price: added.price,
+        quantity: 1}]));
     }
   };
+
+  const handleRemove = (e) => {
+    const {id} = e.target;
+    setCart(cart.filter(item => item.id !== id));
+  }
 
   return (
     <Router>
@@ -137,9 +161,13 @@ const App = () => {
         <MainLayout
           items={items}
           cart={cart}
+          totalPrice={totalPrice}
           showCart={showCart}
           hideCart={hideCart}
-          handleAdd={handleAdd} />
+          handleAdd={handleAdd}
+          handleRemove={handleRemove}
+          // handleChange={handleChange}
+        />
       </div>
     </Router>
   );

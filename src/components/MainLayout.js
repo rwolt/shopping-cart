@@ -25,7 +25,14 @@ const MainLayout = (props) => {
                     />
                 </Route>
             </Switch>
-            {props.showCart ? <ShoppingCart cart={props.cart} hideCart={props.hideCart} /> : ''}
+            {props.showCart ?
+                <ShoppingCart
+                    cart={props.cart}
+                    totalPrice={props.totalPrice}
+                    hideCart={props.hideCart}
+                    handleRemove={props.handleRemove}
+                    handleCHange={props.handleChange}
+                /> : ''}
         </div>
     )
 }
