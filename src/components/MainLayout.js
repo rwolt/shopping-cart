@@ -9,7 +9,10 @@ import '../styles/MainLayout.css';
 const MainLayout = (props) => {
 
     return(
-        <div className="main-layout">
+        <div
+            //If the cart should be show, apply the checkout class to the main layout and show the cart
+            //Otherwise show the main layout without the cart
+            className= {props.showCart ? "main-layout-checkout" : "main-layout"}>
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/shop" exact>
@@ -26,14 +29,13 @@ const MainLayout = (props) => {
                     />
                 </Route>
             </Switch>
-            {props.showCart ?
-                <ShoppingCart
-                    cart={props.cart}
-                    totalPrice={props.totalPrice}
-                    hideCart={props.hideCart}
-                    handleRemove={props.handleRemove}
-                    handleChange={props.handleChange}
-                /> : ''}
+            <ShoppingCart
+                cart={props.cart}
+                totalPrice={props.totalPrice}
+                hideCart={props.hideCart}
+                handleRemove={props.handleRemove}
+                handleChange={props.handleChange}
+            />
         </div>
     )
 }

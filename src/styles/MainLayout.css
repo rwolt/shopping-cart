@@ -1,3 +1,7 @@
-.main-layout {
+.main-layout, .main-layout-checkout {
     margin-top: 140px;
+}
+
+.main-layout-checkout>.shopping-cart-container {
+    transform: translateX(-25vw);
 }
