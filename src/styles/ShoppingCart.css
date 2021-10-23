@@ -9,6 +9,7 @@
     height: 100vh;
     background-color: white;
     border-left: 1px solid black;
+    z-index: 2;
 }
 
 .shopping-cart {

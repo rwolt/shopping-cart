@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import Shop from '../pages/Shop';
 import Product from '../pages/Product';
 import ShoppingCart from './ShoppingCart';
+import '../styles/MainLayout.css';
 
 const MainLayout = (props) => {
 
