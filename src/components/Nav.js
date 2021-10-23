@@ -5,7 +5,9 @@ import CartButton from './CartButton';
 const Nav = (props) => {
     return(
         <div className="nav-bar">
-            <h1 className="title">Kronos Shop</h1>
+            <h1 className="title">
+                <Link to="/">HARBoR</Link>
+            </h1>
             <nav className="nav-list">
                 <li>
                     <Link to="/">Home</Link>

@@ -31,13 +31,19 @@ const App = () => {
       }, 0);
       setTotalItems(total);
     }
+    else {
+      setTotalItems(0)
+    }
   }, [cart]);
 
   useEffect(() => {
-    if (cart.length > 0)
-    setTotalPrice(cart.reduce((prev, next) => {
-      return prev + (next.price * next.quantity);
-    }, 0));
+    if(cart.length === 0) {
+      setTotalPrice(0);
+    } else if (cart.length > 0) {
+      setTotalPrice(cart.reduce((prev, next) => {
+        return prev + (next.price * next.quantity);
+      }, 0));
+    }
   }, [cart]);
 
   const [items, setItems] = useState(
@@ -133,7 +139,7 @@ const App = () => {
           price: added.price,
           quantity: 1}])
     }
-    //If the item is already in the cart, increase its quantity by ones
+    //If the item is already in the cart, increase its quantity by one
     else if(cart.some(cartItem => cartItem.id === added.id)){
       setCart(cart.map(cartItem =>
         cartItem.id === added.id ? {...cartItem, quantity: (cartItem.quantity + 1)} : {...cartItem}));
@@ -154,6 +160,13 @@ const App = () => {
     setCart(cart.filter(item => item.id !== id));
   }
 
+  const handleChange = (e) => {
+    const {id, value} = e.target;
+    if(value !== 0) {
+      setCart(cart.map(item => item.id === id ? {...item, quantity: +value} : {...item}))
+    }
+  }
+
   return (
     <Router>
       <div className="App">
@@ -166,7 +179,7 @@ const App = () => {
           hideCart={hideCart}
           handleAdd={handleAdd}
           handleRemove={handleRemove}
-          // handleChange={handleChange}
+          handleChange={handleChange}
         />
       </div>
     </Router>

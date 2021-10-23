@@ -1,11 +1,12 @@
+import '../styles/CartButton.css';
+
 const CartButton = (props) => {
 
     return(
-        <div className="cart-counter">
-            <button
-                className="cart-button"
-                onClick={props.unHideCart}>Cart</button>
-            <p>{props.totalItems}</p>
+        <div className="cart-button"
+            onClick={props.unHideCart}>
+            <span className="cart-button-text">Cart</span>
+            <div className="cart-counter">{props.totalItems}</div>
         </div>
     )
 }

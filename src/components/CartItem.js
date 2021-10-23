@@ -16,7 +16,14 @@ const CartItem = (props) => {
                     </p>
                 </div>
             </div>
-            <div className="cart-product-quantity">{props.quantity}</div>
+            <input
+                className="cart-product-quantity"
+                id={props.id}
+                type="number"
+                value={props.quantity}
+                min={1}
+                onChange={props.handleChange}
+            />
         </div>
 
     )

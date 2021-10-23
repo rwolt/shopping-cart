@@ -1,12 +1,17 @@
 .nav-bar {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   border-bottom: 1px solid black;
 }
 
-.title {
+.title a {
   font-size: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
 }
 
 .nav-list {
@@ -14,12 +19,13 @@
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  font-size: 24px;
 }
 
 .nav-list a {
   text-decoration: none;
+  text-transform: uppercase;
   color: inherit;
+  font-size: 24px;
 }
 
 .cart-counter {

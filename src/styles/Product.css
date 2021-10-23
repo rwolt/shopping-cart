@@ -14,7 +14,23 @@
     flex-direction: column;
 }
 
+.product-name {
+    font-size: 32px;
+}
+
 .product-image {
     width: 30%;
     margin-top: 5%;
+}
+
+.add-to-cart-product {
+    font-size: 32px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(26, 206, 26);
+    color: white;
+}
+
+.add-to-cart-product:hover {
+    cursor: pointer;
 }

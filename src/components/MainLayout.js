@@ -31,7 +31,7 @@ const MainLayout = (props) => {
                     totalPrice={props.totalPrice}
                     hideCart={props.hideCart}
                     handleRemove={props.handleRemove}
-                    handleCHange={props.handleChange}
+                    handleChange={props.handleChange}
                 /> : ''}
         </div>
     )
