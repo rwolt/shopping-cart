@@ -13,29 +13,33 @@ const MainLayout = (props) => {
             //If the cart should be show, apply the checkout class to the main layout and show the cart
             //Otherwise show the main layout without the cart
             className= {props.showCart ? "main-layout-checkout" : "main-layout"}>
-            <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/shop" exact>
-                    <Shop
-                        items={props.items}
-                        cart={props.cart}
-                        handleAdd={props.handleAdd}
-                    />
-                </Route>
-                <Route path="/shop/:id">
-                    <Product
-                        items={props.items}
-                        handleAdd={props.handleAdd}
-                    />
-                </Route>
-            </Switch>
-            <ShoppingCart
-                cart={props.cart}
-                totalPrice={props.totalPrice}
-                hideCart={props.hideCart}
-                handleRemove={props.handleRemove}
-                handleChange={props.handleChange}
-            />
+                <div className="filter-container">
+                </div>
+                    <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/shop" exact>
+                            <Shop
+                                items={props.items}
+                                cart={props.cart}
+                                handleAdd={props.handleAdd}
+                            />
+                        </Route>
+                        <Route path="/shop/:id">
+                            <Product
+                                items={props.items}
+                                handleAdd={props.handleAdd}
+                            />
+                        </Route>
+                    </Switch>
+
+
+                <ShoppingCart
+                    cart={props.cart}
+                    totalPrice={props.totalPrice}
+                    hideCart={props.hideCart}
+                    handleRemove={props.handleRemove}
+                    handleChange={props.handleChange}
+                />
         </div>
     )
 }

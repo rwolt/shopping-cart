@@ -119,10 +119,16 @@ const App = () => {
 
   const hideCart = () => {
       setShowCart(false);
+      //Wait for the opacity transition to complete before adjusting the z-index
+      setTimeout(() => {
+        document.querySelector('.filter-container').style.zIndex = "-1";
+      }, 300);
   }
 
   const unHideCart = () => {
       setShowCart(true);
+      //Adjust the z-index of the filter to the foreground to prevent mouse clicks in the main container
+      document.querySelector('.filter-container').style.zIndex = "1";
   }
 
 
