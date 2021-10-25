@@ -3,7 +3,7 @@ import heroWatches from '../images/smart-casual.jpg';
 import heroChrono from '../images/casual-wrist.jpg';
 import '../styles/Home.css';
 
-const Home = () => {
+const Home = (props) => {
     return(
         <div className="home-container">
             <div className="flex-row">
@@ -19,13 +19,11 @@ const Home = () => {
                     <img className="hero-image hero-image-wallets" src={heroChrono} alt="man sitting at a desk wearing a casual watch" />
                     <div className="button-container">
                         <p className="tag-line">CHRONO SERIES</p>
-                        <button className="shop-now-button"><Link to="">SHOP NOW</Link></button>
+                        <button className="shop-now-button"><Link to={`/shop/${props.chronoPath}`}>SHOP NOW</Link></button>
                     </div>
                 </div>
 
             </div>
-
-
         </div>
 
     )

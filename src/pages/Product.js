@@ -11,17 +11,18 @@ const Product = (props) => {
         <div className="product-container">
             <img className="product-image" src={item.image} />
             <div className="product-details">
-                <h3 className="product-name">{item.name} {item.size}</h3>
-                <h2 className="product-color">{item.color}</h2>
-                <h2 className="product-price">${item.price}</h2>
+                <h3 className="product-product-name">{item.name} - {item.size}</h3>
+                <h2 className="product-product-color">{item.color}</h2>
+                <h2 className="product-product-price">${item.price}.00</h2>
+                <p className="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nibh pharetra justo convallis ullamcorper ac vel dui. Curabitur tincidunt turpis eget felis pulvinar, et dictum tellus sollicitudin. Aliquam vitae efficitur dui.  </p>
                 <button
                     className="add-to-cart-product"
                     id={item.id}
                     onClick={props.handleAdd}>
-                    Add to Cart
+                    <span className="button-text">Add to Cart</span>
+                    <span className="button-price">{`$${item.price}.00`}</span>
                 </button>
             </div>
-
         </div>
     )
 }

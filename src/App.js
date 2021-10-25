@@ -51,7 +51,7 @@ const App = () => {
       {
        name: 'Chrono',
        size: '43mm',
-       color: 'Black',
+       color: 'Panther Black',
        price: 138,
        image: chronoBlack,
        id: uniqid()
@@ -59,7 +59,7 @@ const App = () => {
       {
         name: 'Chrono',
         size: '43mm',
-        color: 'Silver',
+        color: 'White Sandstone',
         price: 138,
         image: chronoSilver,
         id: uniqid()
@@ -67,7 +67,7 @@ const App = () => {
        {
         name: 'Blacktop',
         size: '42mm',
-        color: 'Gold',
+        color: 'Champion Gold',
         price: 198,
         image: blacktopGold,
         id: uniqid()
@@ -75,7 +75,7 @@ const App = () => {
        {
         name: 'Legacy',
         size: '42mm',
-        color: 'Silver',
+        color: 'Gunmetal Brown',
         price: 118,
         image: legacySilver,
         id: uniqid()
@@ -83,7 +83,7 @@ const App = () => {
       {
         name: 'Blacktop',
         size: '42mm',
-        color: 'Silver',
+        color: 'Silver Link',
         price: 198,
         image: blacktopSilver,
         id: uniqid()
@@ -91,15 +91,15 @@ const App = () => {
        {
         name: 'Legacy',
         size: '42mm',
-        color: 'Gold',
+        color: 'Grizzly Brown',
         price: 118,
         image: legacyGold,
         id: uniqid()
        },
        {
-        name: 'Classic',
-        size: '40mm',
-        color: 'Gold',
+        name: 'Chrono',
+        size: '43mm',
+        color: 'Classic Gold',
         price: 158,
         image: classicGold,
         id: uniqid()
@@ -107,7 +107,7 @@ const App = () => {
        {
         name: 'Blacktop',
         size: '42mm',
-        color: 'Black',
+        color: 'Black Link',
         price: 198,
         image: blacktopBlack,
         id: uniqid()
@@ -133,7 +133,7 @@ const App = () => {
 
 
   const handleAdd = (e) => {
-    const {id} = e.target;
+    const {id} = e.currentTarget;
     const added = items.filter(item => item.id === id)[0];
     //If the cart is empty, add the item with a quantity of 1
     if (cart.length === 0) {

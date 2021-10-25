@@ -31,7 +31,10 @@ const ShoppingCart = (props) => {
                 })}
 
             </div>
-            <div className="order-total">Total: ${props.totalPrice}</div>
+            <div className="order-total">
+                <span className="order-total-text">Subtotal: </span>
+                <span className="order-total-subtotal">${props.totalPrice}.00</span>
+            </div>
             <button className="checkout-button">CHECKOUT</button>
         </div>
     )

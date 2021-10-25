@@ -32,8 +32,8 @@
 }
 
 .shopping-cart-title {
-    font-size: 24px;
-    letter-spacing: 0.15em;
+    font-size: 22px;
+    letter-spacing: 0.1em;
 }
 
 .close-cart-button {
@@ -52,22 +52,34 @@
 }
 
 .order-total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     bottom: 100px;
-    font-size: 36px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.order-total span {
+    padding: 0px 20px;
 }
 
 .checkout-button {
     background-color: rgb(26, 206, 26);
+    border: none;
     color: white;
-    border-radius: 5px;
     position: absolute;
-    bottom: 10px;
-    width: 20vw;
-    font-size: 30px;
-    padding: 20px 20px;
+    bottom: 20px;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 700px;
+    padding: 15px 20px;
 }
 
 .checkout-button:hover {
     cursor: pointer;
+    background-color: rgb(26, 213, 26);
 }

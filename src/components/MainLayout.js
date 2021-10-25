@@ -16,7 +16,11 @@ const MainLayout = (props) => {
                 <div className="filter-container">
                 </div>
                     <Switch>
-                        <Route path="/" exact component={Home} />
+                        <Route path="/" exact>
+                            <Home
+                                chronoPath={props.items[1].id}
+                            />
+                        </Route>
                         <Route path="/shop" exact>
                             <Shop
                                 items={props.items}
