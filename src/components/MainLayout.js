@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Switch, Route } from 'react-router';
 import Home from '../pages/Home';
 import Shop from '../pages/Shop';
