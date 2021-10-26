@@ -8,6 +8,7 @@ import '../styles/Home.css';
 const Home = (props) => {
     return(
         <div className="home-container">
+
             <div className="flex-row">
                 <div className="hero-container hero-container-watches">
                     <img className="hero-image hero-image-watches" src={heroWatches} alt="urban model wearing a dressy wristwatch" />
@@ -16,7 +17,6 @@ const Home = (props) => {
                         <button className="shop-now-button"><Link to="/shop">SHOP NOW</Link> </button>
                     </div>
                 </div>
-
                 <div className="hero-container hero-container-chrono">
                     <img className="hero-image hero-image-wallets" src={heroChrono} alt="man sitting at a desk wearing a casual watch" />
                     <div className="button-container">
@@ -24,8 +24,9 @@ const Home = (props) => {
                         <button className="shop-now-button"><Link to={`/shop/${props.chronoPath}`}>SHOP NOW</Link></button>
                     </div>
                 </div>
-            </div>
-            <div className="flex-row">
+
+
+
                 <div className="hero-container hero-container-wallet">
                     <img className="hero-image hero-image-wallets" src={heroWallets} alt="man sitting at a desk wearing a casual watch" />
                     <div className="button-container">

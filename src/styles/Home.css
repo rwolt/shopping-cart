@@ -9,9 +9,10 @@
 
 .flex-row {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   height: auto;
+  flex-wrap: wrap;
 }
 
 .hero-container, .form-container {
@@ -20,7 +21,7 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-  margin: 20px;
+  margin: 1.5%;
 }
 
 .hero-image {
@@ -28,20 +29,20 @@
 }
 
 .hero-container-watches {
-  width: 60%;
+  width: 52.5%;
 }
 
 .hero-container-chrono {
-  width: 40%;
+  width: 35%;
 }
 
 .hero-container-wallet {
-  width: 40%;
+  width: 35%;
 }
 
 
 .hero-container-sunglasses {
-  width: 60%;
+  width: 52.5%;
 }
 
 
@@ -64,7 +65,7 @@
 }
 
 a {
-  font-size: 16px;
+  font-size: 18px;
   display: block;
   padding: 0.75em 2em;
 }
@@ -89,13 +90,78 @@ a {
 @media only screen and (max-width: 1566px) {
   .tag-line {
     font-size: 26px;
+  }
 
+  a {
+    font-size: 14px;
   }
 }
 
 @media only screen and (max-width: 1365px) {
   .tag-line {
-    font-size: 22px;
+    font-size: 20px;
+    padding: 0.75em 3em;
+  }
 
+  a {
+    font-size: 14px;
+  }
+
+  .hero-container {
+    margin: 2.5%;
+  }
+
+  .hero-container-watches {
+    width: 100%;
+  }
+  .hero-container-chrono {
+    width: 45%;
+  }
+  .hero-container-wallet {
+    width: 45%;
+  }
+  .hero-container-sunglasses {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .tag-line {
+    font-size: 14px;
+    padding: 0.5em 2em;
+  }
+  a {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 700px ) {
+  .tag-line {
+    font-size: 14px;
+    padding: 0.5em 1em;
+  }
+
+  a {
+    padding: 0.5em 1em;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .tag-line {
+    font-size: 14px;
+    padding: 0.5em 1em;
+  }
+
+  .hero-container-watches {
+    width: 100%;
+  }
+  .hero-container-chrono {
+    width: 100%;
+  }
+  .hero-container-wallet {
+    width: 100%;
+  }
+  .hero-container-sunglasses {
+    width: 100%;
   }
 }
