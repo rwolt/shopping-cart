@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.fc85b4e5.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.bf35e093.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.bf35e093.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.c3c4442c.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.c3c4442c.js.map",
+    "static/js/2.d18a7d24.chunk.js": "/shopping-cart/static/js/2.d18a7d24.chunk.js",
+    "static/js/2.d18a7d24.chunk.js.map": "/shopping-cart/static/js/2.d18a7d24.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.fc85b4e5.chunk.css.map": "/shopping-cart/static/css/main.fc85b4e5.chunk.css.map",
+    "static/js/2.d18a7d24.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.d18a7d24.chunk.js.LICENSE.txt",
+    "static/media/all-black-leather.7dfb52c2.jpg": "/shopping-cart/static/media/all-black-leather.7dfb52c2.jpg",
+    "static/media/black-card-wallet.54547841.jpg": "/shopping-cart/static/media/black-card-wallet.54547841.jpg",
+    "static/media/black-gold-leather.e17606f6.jpg": "/shopping-cart/static/media/black-gold-leather.e17606f6.jpg",
+    "static/media/black-gold.bbb0f9c9.jpg": "/shopping-cart/static/media/black-gold.bbb0f9c9.jpg",
+    "static/media/brown-gold-leather.13047a6d.jpg": "/shopping-cart/static/media/brown-gold-leather.13047a6d.jpg",
+    "static/media/brown-silver.54f378f7.jpg": "/shopping-cart/static/media/brown-silver.54f378f7.jpg",
+    "static/media/casual-wrist.e0bc883f.jpg": "/shopping-cart/static/media/casual-wrist.e0bc883f.jpg",
+    "static/media/champion-gold.d4be0d5e.jpg": "/shopping-cart/static/media/champion-gold.d4be0d5e.jpg",
+    "static/media/eyeglasses3.de4d9695.jpg": "/shopping-cart/static/media/eyeglasses3.de4d9695.jpg",
+    "static/media/light-brown-silver.7e7de868.jpg": "/shopping-cart/static/media/light-brown-silver.7e7de868.jpg",
+    "static/media/silver-white.0495dfa3.jpg": "/shopping-cart/static/media/silver-white.0495dfa3.jpg",
+    "static/media/smart-casual.8adb651c.jpg": "/shopping-cart/static/media/smart-casual.8adb651c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3c4442c.js",
+    "static/js/2.d18a7d24.chunk.js",
+    "static/css/main.fc85b4e5.chunk.css",
+    "static/js/main.bf35e093.chunk.js"
+  ]
+}
