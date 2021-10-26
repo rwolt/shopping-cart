@@ -91,7 +91,7 @@ const App = () => {
        {
         name: 'Legacy',
         size: '42mm',
-        color: 'Grizzly Brown',
+        color: 'Bronze Brown',
         price: 118,
         image: legacyGold,
         id: uniqid()

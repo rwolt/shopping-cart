@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin-top: 100px;
     padding-top: 40px;
 }
 
@@ -12,6 +11,22 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1366px) {
+    .shop-container {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .shop-container {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
 }
 /*
 .hidden {

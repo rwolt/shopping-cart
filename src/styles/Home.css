@@ -1,30 +1,54 @@
 .home-container {
-  width: 100%;
-  height: 75vh;
+  width: 90%;
+  height: 100%;
   padding-top: 40px;
-  display: flex;
   justify-content: center;
 }
+
+
 
 .flex-row {
   display: flex;
-  justify-content: center;
-  width: 80%;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
 }
 
-.hero-container {
+.hero-container, .form-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   position: relative;
-  margin: 40px;
+  margin: 20px;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.hero-container-watches {
+  width: 60%;
+}
+
+.hero-container-chrono {
+  width: 40%;
+}
+
+.hero-container-wallet {
+  width: 40%;
+}
+
+
+.hero-container-sunglasses {
+  width: 60%;
 }
 
 
 .button-container {
   display: flex;
   position: absolute;
-  bottom: 30px;
+  bottom: 10%;
   background-color: white;
   color: inherit;
   flex-direction: column;
@@ -34,7 +58,7 @@
 
 .tag-line {
   font-size: 32px;
-  padding: 10px 60px;
+  padding: 0.5em 2em;
   margin: 0;
   letter-spacing: 0.05em;
 }
@@ -42,13 +66,12 @@
 a {
   font-size: 16px;
   display: block;
-  padding: 10px 30px;
+  padding: 0.75em 2em;
 }
 
 .shop-now-button {
   background-color: black;
   color: white;
-  font-size: 14px;
   font-family: 'Roboto', sans-serif;
   border: none;
   margin-bottom: 20px;
@@ -63,6 +86,16 @@ a {
   cursor: pointer;
 }
 
-.hero-image {
-  height: 100%;
+@media only screen and (max-width: 1566px) {
+  .tag-line {
+    font-size: 26px;
+
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .tag-line {
+    font-size: 22px;
+
+  }
 }
