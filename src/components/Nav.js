@@ -15,9 +15,6 @@ const Nav = (props) => {
                 <li>
                     <Link to="/shop">Shop</Link>
                 </li>
-                <li>
-                    <Link to="/contact">Contact</Link>
-                </li>
             </nav>
             <CartButton
                 unHideCart={props.unHideCart}

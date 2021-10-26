@@ -29,3 +29,29 @@
 .main-layout-checkout>.shopping-cart-container {
     transform: translateX(-25vw);
 }
+
+@media only screen and (max-width: 1366px) {
+    .main-layout-checkout>.shopping-cart-container {
+        transform: translateX(-30vw);
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .main-layout-checkout>.shopping-cart-container {
+        transform: translateX(-40vw);
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .main-layout-checkout>.shopping-cart-container {
+        transform: translateX(-60vw);
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    .main-layout-checkout>.shopping-cart-container {
+        transform: translateX(-100vw);
+    }
+  }

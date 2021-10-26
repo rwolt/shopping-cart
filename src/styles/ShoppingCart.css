@@ -83,3 +83,35 @@
     cursor: pointer;
     background-color: rgb(26, 213, 26);
 }
+
+@media only screen and (max-width: 1366px) {
+    .shopping-cart-container {
+        width: 30vw;
+        right: -30vw;
+    }
+
+    .shopping-cart-title {
+        font-size: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .shopping-cart-container {
+        width: 40vw;
+        right: -40vw;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .shopping-cart-container {
+        width: 60vw;
+        right: -60vw;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .shopping-cart-container {
+        width: 100vw;
+        right: -100vw;
+    }
+  }

@@ -46,3 +46,32 @@
     border: none;
     font-size: 16px;
 }
+
+
+@media only screen and (max-width: 1366px) {
+  .nav-list a {
+    font-size: 20px;
+  }
+
+  .cart-button-text {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .title a {
+    font-size: 30px;
+  }
+
+  .nav-list a {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .nav-list a {
+    display: none;
+  }
+}
